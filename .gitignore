@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pnp
+.pnp.js
+
+# Build / dist
+frontend/dist/
+backend/target/
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Logs and temp
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Vite
+frontend/node_modules/.vite/
+
+# Gradle (if used later)
+backend/.gradle/
+
+# H2 DB files (if persistent)
+*.db
+*.trace.db
