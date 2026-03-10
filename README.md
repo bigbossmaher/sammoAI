@@ -4,7 +4,7 @@
 
 Sammo-AI is an AI-driven cybersecurity company focused on strengthening the cybersecurity of U.S. legislative systems and critical national infrastructure. This repository contains the core platform: real-time threat detection, predictive cyber defense, automated incident response, and secure data management.
 
-## Vision (from Business Plan)
+## Vision 
 
 - **Real-time threat detection and analysis** — Monitor systems and networks for unauthorized access and suspicious activity
 - **Predictive cyber defense** — ML algorithms to forecast vulnerabilities and proactively address them
