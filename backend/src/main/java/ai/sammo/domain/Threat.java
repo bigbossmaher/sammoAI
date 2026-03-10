@@ -30,6 +30,9 @@ public class Threat {
 
     private String recommendation;
 
+    @Column(name = "anomaly_score")
+    private Double anomalyScore;
+
     public enum ThreatType {
         MALWARE, PHISHING, RANSOMWARE, UNAUTHORIZED_ACCESS, DATA_EXFILTRATION,
         DDOS, SQL_INJECTION, ZERO_DAY, INSIDER_THREAT, OTHER
@@ -68,4 +71,7 @@ public class Threat {
 
     public String getRecommendation() { return recommendation; }
     public void setRecommendation(String recommendation) { this.recommendation = recommendation; }
+
+    public Double getAnomalyScore() { return anomalyScore; }
+    public void setAnomalyScore(Double anomalyScore) { this.anomalyScore = anomalyScore; }
 }

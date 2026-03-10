@@ -80,9 +80,16 @@ python -m uvicorn main:app --reload
 | `GET /api/incidents` | List and filter incidents |
 | `GET /api/alerts` | Real-time security alerts |
 | `GET /api/dashboard/summary` | Dashboard metrics and KPIs |
+| `GET /api/events/stream` | SSE stream for live updates (new threats/alerts) |
+| `POST /api/events` | Ingest event; ML scores it; creates threat+alert if anomaly |
 | `POST /api/incidents/{id}/respond` | Trigger automated incident response |
+
+### Real-time pipeline
+
+1. Send events to `POST /api/events` with `{ "source", "target", "metrics": [5 floats] }`.
+2. Backend calls the ML service (`POST /predict/anomaly`); if the score exceeds the threshold, a Threat, Incident, and Alert are created.
+3. The dashboard subscribes to `GET /api/events/stream` (SSE) and refreshes when new threats/alerts appear.
 
 ## License & Contact
 
 **Sammo-AI** — Mr. Maher Sammoudi, Founder & CEO  
-sammoudi.maher@gmail.com | 641-819-1376

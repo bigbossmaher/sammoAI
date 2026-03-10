@@ -27,3 +27,5 @@ server:
 sammo:
   cors:
     allowed-origins: http://localhost:5173,http://localhost:3000
+  ml-service-url: http://localhost:8000
+  anomaly-threshold: 0.3

@@ -9,6 +9,7 @@ export interface Threat {
   detectedAt: string
   resolvedAt: string | null
   recommendation: string | null
+  anomalyScore?: number | null
 }
 
 export interface Incident {

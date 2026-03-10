@@ -13,7 +13,8 @@ public record ThreatDto(
     boolean resolved,
     Instant detectedAt,
     Instant resolvedAt,
-    String recommendation
+    String recommendation,
+    Double anomalyScore
 ) {
     public static ThreatDto from(Threat t) {
         return new ThreatDto(
@@ -26,7 +27,8 @@ public record ThreatDto(
             t.isResolved(),
             t.getDetectedAt(),
             t.getResolvedAt(),
-            t.getRecommendation()
+            t.getRecommendation(),
+            t.getAnomalyScore()
         );
     }
 }
