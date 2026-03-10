@@ -1,4 +1,12 @@
+import { NavLink } from 'react-router-dom'
 import { Box, Flex, Text, HStack } from '@chakra-ui/react'
+
+const navLinks = [
+  { to: '/', label: 'Dashboard' },
+  { to: '/threats', label: 'Threats' },
+  { to: '/incidents', label: 'Incidents' },
+  { to: '/alerts', label: 'Alerts' },
+]
 
 export function Header() {
   return (
@@ -13,18 +21,20 @@ export function Header() {
           </Text>
         </Flex>
         <HStack spacing={6}>
-          <Text fontSize="sm" color="blue.400" cursor="pointer">
-            Dashboard
-          </Text>
-          <Text fontSize="sm" color="gray.400" cursor="pointer" _hover={{ color: 'blue.400' }}>
-            Threats
-          </Text>
-          <Text fontSize="sm" color="gray.400" cursor="pointer" _hover={{ color: 'blue.400' }}>
-            Incidents
-          </Text>
-          <Text fontSize="sm" color="gray.400" cursor="pointer" _hover={{ color: 'blue.400' }}>
-            Alerts
-          </Text>
+          {navLinks.map(({ to, label }) => (
+            <NavLink key={to} to={to} end={to === '/'}>
+              {({ isActive }) => (
+                <Text
+                  fontSize="sm"
+                  color={isActive ? 'blue.400' : 'gray.400'}
+                  _hover={{ color: 'blue.400' }}
+                  cursor="pointer"
+                >
+                  {label}
+                </Text>
+              )}
+            </NavLink>
+          ))}
         </HStack>
       </Flex>
     </Box>

@@ -26,6 +26,11 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ responseActions }),
     }),
+  updateIncidentStatus: (id: number, status: string) =>
+    fetchApi<import('../types/api').Incident>(`/incidents/${id}/status`, {
+      method: 'PATCH',
+      body: JSON.stringify({ status }),
+    }),
   getAlerts: (acknowledged?: boolean) => {
     const q = acknowledged !== undefined ? `?acknowledged=${acknowledged}` : ''
     return fetchApi<import('../types/api').Alert[]>(`/alerts${q}`)
