@@ -11,6 +11,7 @@ Sammo-AI is an AI-driven cybersecurity company focused on strengthening the cybe
 - **Automated incident response** — Swift containment and response to detected threats
 - **Secure data management** — Protect sensitive legislative and governmental data
 - **Consultancy & training** — Assessments, audits, and cybersecurity best practices
+<img width="2558" height="1266" alt="image" src="https://github.com/user-attachments/assets/3da006f7-8c7f-4d87-9e81-7d34d745d000" />
 
 ## Target Clients
 
